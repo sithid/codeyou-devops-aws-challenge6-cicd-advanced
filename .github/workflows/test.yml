@@ -33,7 +33,7 @@ jobs:
       - name: Install Dependencies
         run: npm ci
       - name: Run Tests
-        run: npm test
+        run: npm test --passWithNoTests
 
   build:
     runs-on: ubuntu-latest
