@@ -23,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Check for Vulnerabilities
-        run: npm audit
+        run: npm audit fix --force
     
   test:
     runs-on: ubuntu-latest
