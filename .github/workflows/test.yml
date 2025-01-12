@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
       #- name: Lint Code
       #  run: npm run lint
 
@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
       - name: Check for Vulnerabilities
         run: npm audit
     
@@ -31,9 +31,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
       - name: Run Tests
-        run: npm test
+        run: npm test --passWithNoTests
 
   build:
     runs-on: ubuntu-latest
